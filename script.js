@@ -1,6 +1,7 @@
+const profileform = document.querySelector('#formprofile');
+const sectionform = document.querySelector('#formsection');
+
 function process() {
-    const profileform = document.querySelector('#formprofile');
-    const sectionform = document.querySelector('#formsection');
 
     document.getElementById("nama").innerHTML = document.getElementById("InputNama").value;
     document.getElementById("role").innerHTML = document.getElementById("InputRole").value;
@@ -12,6 +13,13 @@ function process() {
 
     profileform.reset();
     sectionform.remove();
-    return false;
+    // return false;
 };
+
+profileform.addEventListener("submit", (event) => {
+    event.preventDefault();
+    process();
+});
+
+
 
